@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Select } from "antd";
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
+import { Outlet } from "react-router-dom";
+
+const handleChange = (value: string) => {
+  i18next.changeLanguage(value);
+};
 
 function App() {
+  const { t } = useTranslation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Select
+        defaultValue={t("en")}
+        value={t(i18next.language)}
+        style={{ width: 80, position: "absolute", right: 5, top: 5 }}
+        onChange={handleChange}
+        options={[
+          { value: "en", label: t("en") },
+          { value: "th", label: t("th") },
+        ]}
+      />
+      <Outlet />
+    </>
   );
 }
 

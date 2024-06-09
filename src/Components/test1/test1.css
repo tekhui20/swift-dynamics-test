@@ -1,0 +1,105 @@
+.card {
+    user-select: none;
+    display: flex;
+    justify-content: center;
+}
+
+.card:hover {
+    background-color: #ffa200;
+    border-color: #ffa200;
+}
+
+.card:hover #circle,.card:hover #square,.card:hover #rectangle,.card:hover #parallelogram,.card:hover #oval {
+    background: #fff;
+}
+
+.card:active {
+    background-color: #6eda78;
+    border-color: #6eda78;
+}
+
+.text {
+    position: absolute;
+    bottom: -10px;
+    border-radius: 30px;
+    background-color: #6eda78;
+    color: #fff;
+    padding: 2px 10px;
+}
+
+#triup {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid gray;
+}
+
+#tridown {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid gray;
+}
+
+#trileft {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-right: 100px solid gray;
+    border-bottom: 50px solid transparent;
+}
+
+#triright {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-left: 100px solid gray;
+    border-bottom: 50px solid transparent;
+}
+
+#trapezoid {
+    border-bottom: 100px solid gray;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 100px;
+}
+
+.card:hover #trapezoid {
+    border-bottom: 100px solid #fff;
+}
+
+#parallelogram {
+    width: 150px;
+    height: 100px;
+    transform: skew(20deg);
+    background: gray;
+}
+
+#circle {
+    width: 100px;
+    height: 100px;
+    background: gray;
+    border-radius: 50%
+}
+
+#oval {
+    width: 200px;
+    height: 100px;
+    background: gray;
+    border-radius: 100px / 50px;
+}
+
+#rectangle {
+    width: 200px;
+    height: 100px;
+    background: gray;
+}
+
+#square {
+    width: 100px;
+    height: 100px;
+    background: gray;
+}
